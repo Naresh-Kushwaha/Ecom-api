@@ -1,13 +1,14 @@
 package com.example.ecom.Model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+
+
+@Document(collection = "Admin_Data")
 public class adminModel {
+    
+    
     @Id
-    @GeneratedValue(strategy =GenerationType.SEQUENCE )
     private int id;
     private String name;
     private long password;

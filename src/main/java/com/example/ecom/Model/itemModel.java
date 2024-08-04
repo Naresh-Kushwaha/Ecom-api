@@ -1,15 +1,14 @@
 package com.example.ecom.Model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+
+
+@Document(collection= "Item_data")
 public class itemModel {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private  int id;
     private String imgUrl;
     private String name;
