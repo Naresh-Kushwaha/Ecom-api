@@ -5,7 +5,7 @@ WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
 COPY src ./src
-RUN mvn package -DskipTests
+
 
 # Use the official OpenJDK image to run the application
 # https://hub.docker.com/_/openjdk
